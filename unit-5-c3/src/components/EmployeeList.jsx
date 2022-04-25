@@ -25,7 +25,7 @@ export const EmployeeList = () => {
       {/* On clicking this card anywhere, user goes to user details */}
       {users.map((el, index) => {
         return (
-            <div className="employee_card">
+            <div className="employee_card" >
 
               <Link to={`/employees/${el.id}`}>
 

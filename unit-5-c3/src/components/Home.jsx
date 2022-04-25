@@ -33,10 +33,14 @@ export const Home = () => {
 
   useEffect(() => {
 
-    axios.get("http://localhost:8080/employee").then(({ data }) => {
-      setUsers(data);
-      details(data);
-    })
+    
+      axios.get("http://localhost:8080/employee").then(({ data }) => {
+        setUsers(data);
+        details(data);
+      })
+    
+
+    
 
     
 
@@ -51,8 +55,8 @@ export const Home = () => {
 
   return (
       <>
-        <h3 className="welcome">Welcome To employee management system</h3>
-        <div className="home">
+        <h3 className="welcome" style={{marginLeft: "600px"}}>Welcome To employee management system</h3>
+        <div className="home" style={{width: "40%", margin: "auto", border: "1px solid gold"}}>
           <span>Stats</span>
           <div>
             Total Employees: <span className="totalemp">{users.length}</span>
